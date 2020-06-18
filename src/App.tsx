@@ -9,21 +9,7 @@ import {
 import './App.css';
 import Cans from './components/Cans';
 import About from './components/About';
-
-const cans = [
-  { 
-    id: 1, 
-    desc: 'Asahi Super Dry', 
-    volume: '500ml', 
-    price: '280¥'
-  },
-  { 
-    id: 2, 
-    desc: 'Kirin Ichiban', 
-    volume: '500ml', 
-    price: '250¥'
-  }
-];
+import cans from './shared/cans'
 
 function App() {
   return (
