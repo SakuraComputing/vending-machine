@@ -1,10 +1,16 @@
-.App {
+.app {
   text-align: center;
 }
 
-.App-logo {
+.vending-app {
+  height: 100%;  
+}
+
+.app-logo {
   height: 40vmin;
-  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  background:url('./images/vending-machine.jpg') center center no-repeat;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -24,15 +30,68 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.heading {
+  font-size: "20px";;
+  color: cornsilk;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  background-color: darkslategrey;
+  padding: 40px;
+  border-radius: 20px;
+  border-style: double;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav {
+  background: darkgray;
+  height: 60px; /* set same as height & line-height below */
+}
+
+/* This rule centers the nav items verticaly in the bar with the height and line height properties. Spacing between the nav items is controlled by setting right and left padding.  */
+.nav li {
+  display: inline-block;
+  list-style: none;
+  height: 60px; /* should be the same as line-height */
+  line-height: 60px; /* should be the same as height */
+  padding: 0 40px; /* "0" sets top and bottom padding to none */
+}
+
+/* :hover allows you change the background color of the nav items when you mouse over them. Play around with the transition value to change the speed of the hover transition. */
+.nav li:hover {
+  background: skyblue;
+  transition: background .3s;
+}
+
+/* This rule is applied to the link <a> tag. It lets you turn off the link underline and set the link text color. */
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.cans {
+  position: fixed;
+  width: 50%;
+  height: 50vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  border-style: double;
+  background-color: darkslategray;
+  color: cornsilk;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.vending-item {
+  background-color: cornsilk;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 8px;
+  border-style: groove;
 }

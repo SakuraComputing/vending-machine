@@ -1,25 +1,62 @@
 import React from 'react';
-import logo from './logo.svg';
+import { 
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+ } 
+ from 'react-router-dom';
 import './App.css';
+import Cans from './components/Cans';
+import About from './components/About';
+
+const cans = [
+  { 
+    id: 1, 
+    desc: 'Asahi Super Dry', 
+    volume: '500ml', 
+    price: '280¥'
+  },
+  { 
+    id: 2, 
+    desc: 'Kirin Ichiban', 
+    volume: '500ml', 
+    price: '250¥'
+  }
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="vending-app">
+        <nav className="nav">
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to ="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/cans">Cans</Link>  
+            </li>       
+          </ul>
+        </nav>
+        <div className="app app-logo">
+          <h1>Vending Machine</h1>
+        </div>
+      </div>
+
+      <Switch>
+        <Route path="/about">
+          <About name={'The perfect vending machine'} />
+        </Route>
+        <Route path="/cans">
+          <Cans canArray={cans}/>
+        </Route>
+      </Switch>
+
+    </Router>
   );
 }
 
