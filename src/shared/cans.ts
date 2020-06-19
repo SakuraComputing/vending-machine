@@ -1,4 +1,6 @@
-export default  [
+import { ICan } from "../components/types/vending";
+
+const canArray = [
     { 
         id: 1, 
         desc: 'Asahi Super Dry', 
@@ -12,3 +14,5 @@ export default  [
         price: '250¥'
       }
 ];
+
+export const cans : ICan[] = canArray;

@@ -1,6 +1,8 @@
-import { SET_CANS, canActionTypes, ICans } from '../components/types/vending';
+import { SET_CANS, canActionTypes, ICan } from '../components/types/vending';
 
-export const setCans = (cans: ICans): canActionTypes => ({
-    type: SET_CANS,
-    cans
-});
+export function setCans(cans: ICan[]): canActionTypes {
+    return {
+        type: SET_CANS,
+        cans
+    }
+};

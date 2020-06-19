@@ -9,7 +9,7 @@ import {
 import './App.css';
 import Cans from './components/Cans';
 import About from './components/About';
-import cans from './shared/cans'
+import { cans } from './shared/cans'
 
 function App() {
   return (

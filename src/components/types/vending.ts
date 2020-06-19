@@ -7,13 +7,9 @@ export interface ICan {
     price: string;
 }
 
-export interface ICans {
-    ICans: ICan[];
-}
-
 interface setCansAction {
     type: typeof SET_CANS
-    cans: ICans
+    cans: ICan[]
 }
 
 export interface IAboutProps {
@@ -22,7 +18,6 @@ export interface IAboutProps {
 
 export type canActionTypes = setCansAction;
 
-export interface IAppState {
-    cans: ICans[];
-}
- 
+ export interface IAppState {
+     cans: ICan[]
+ }
